@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  app-currency:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: currency_app
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8099:80"
+    privileged: true

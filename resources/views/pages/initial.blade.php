@@ -80,6 +80,12 @@
             @endif
 
             <div class="content">
+                <div>
+                    <h3>
+                        {{ $nome }}
+                    </h3>
+                </div>
+
                 <div class="title m-b-md">
                     Laravel
                 </div>
