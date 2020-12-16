@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
+Route::post('currency-quote', ['as' => 'currency-quote', 'uses' => 'HomeController@getQuotation']);
+
+Route::post('currency-quote-period', ['as' => 'currency-period',  'uses' => 'HomeController@getQuotationByPeriods']);
