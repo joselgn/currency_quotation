@@ -1,106 +1,53 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.theme')
 
-        <title>Laravel</title>
+@section('content')
+<div class="container form-select-coins" >
+    <div class="left-select">
+        <select id="coin_from">
+            <option value="">Selecione uma Moeda</option>
+            @foreach($coins as $coin)
+                <option value="{{ $coin['sigla'] }}">
+                    {{ $coin['nome'] }} - {{ $coin['sigla'] }}
+                </option>
+            @endforeach
+        </select>
+    </div>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+    <div class="comparative-select">
+        X
+    </div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <div class="right-select">
+        <select id="coin_to">
+            <option value="BRL" selected>
+                Real Brasileiro - BRL
+            </option>
+        </select>
+    </div>
+</div>
 
-            .full-height {
-                height: 100vh;
-            }
+<div class="container result_coin_board result_quotation" >
+    <div class="text_board">
+        <div class="cotacao"></div>
+        <div class="comparacao"></div>
+    </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <div class="graphic">
+        <div id="chart_div" style="width: 100%; height: 300px;"></div>
+    </div>
+</div>
 
-            .position-ref {
-                position: relative;
-            }
+<div class="more_quotations result_quotation">
+    <h3>Mais opções de prazo para cotação</h3>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+    <div class="menu_quotations">
+        <button class="btn_days" value="5">5 Dias</button>
+        <button class="btn_days" value="10">10 Dias</button>
+        <button class="btn_days" value="15">15 Dias</button>
+    </div>
 
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div>
-                    <h3>
-                        {{ $nome }}
-                    </h3>
-                </div>
-
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+    <div class="graphic_by_period" >
+        <div id="cart_by_period" style="width: 100%; height: 300px;"></div>
+    </div>
+</div>
+@endsection
