@@ -1,0 +1,244 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Varela', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+
+p, ol, ul {
+    margin-top: 0;
+}
+
+ol, ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul.actions {
+    text-align: center;
+}
+
+p {
+    line-height: 180%;
+}
+
+a {
+    color: #0000FF;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.messages {
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.messages .alert div {
+    width: 80%;
+    text-align: center;
+    margin: 0px auto;
+    padding: 15px;
+}
+
+.alert-danger {
+    width: 100%;
+    text-align: center;
+    background-color: #F8D7DA;
+    color: #803037;
+    font-size: 25px;
+}
+
+.alert-success {
+    width: 100%;
+    text-align: center;
+    background-color: #D4EDDA;
+    color: #79A684;
+    font-size: 25px;
+}
+
+
+/*********************************************************************************/
+/* Form El                                                                       */
+/*********************************************************************************/
+select {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-select-coins {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-select-coins .left-select {
+    width: 300px;
+    margin: 5px auto;
+    align-items: flex-end;
+    background-color: #333;
+    padding: 10px;
+}
+
+.form-select-coins .right-select {
+    width: 300px;
+    margin: 5px auto;
+    align-items: flex-start;
+    background-color: #333;
+    padding: 10px;
+}
+.form-select-coins .comparative-select {
+    margin: 5px auto;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    color: #FFF;
+}
+
+.title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 35px;
+}
+
+.title h3 {
+    text-transform: uppercase;
+    font-size: 2.7em;
+}
+
+/*********************************************************************************/
+/* Body - content                                                                */
+/*********************************************************************************/
+.container {
+    overflow: hidden;
+    margin: 20px auto;
+    width: 1000px;
+}
+
+.result_coin_board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.result_coin_board .graphic {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.result_coin_board .text_board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 15px;
+}
+
+.result_coin_board .text_board .cotacao {
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 50px;
+    color: #79a684 !important;
+}
+
+.result_coin_board .text_board .comparacao {
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.more_quotations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.more_quotations h3 {
+    background-color: #333333;
+    color: #FFF;
+    font-weight: bold;
+    padding: 30px;
+    margin: 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.more_quotations .menu_quotations {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.more_quotations .menu_quotations button {
+    width: 25%;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    margin-left: 20px;
+}
+
+.more_quotations .menu_quotations button:hover {
+    width: 33%;
+    background-color: #8099fd;
+    color: #000000;
+    font-size: 25px;
+}
+
+.more_quotations .menu_quotations .active {
+    background-color: #8099fd;
+    color: #000000;
+}
+
+.result_quotation {
+    display: none;
+}
+
+.graphic_by_period {
+    display: none;
+}
